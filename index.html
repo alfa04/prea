@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" sizes="57x57" href="images/fabicon.ico/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="images/fabicon.ico/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/fabicon.ico/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="images/fabicon.ico/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/fabicon.ico/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="images/fabicon.ico/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="images/fabicon.ico/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/fabicon.ico/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/fabicon.ico/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="images/fabicon.ico/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/fabicon.ico/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="images/fabicon.ico/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/fabicon.ico/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prea</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tahoma', sans-serif;
+        }
+        body {
+            display: flex;
+            height: 100vh;
+            padding: 1em;
+            background-color: #ece8e0;
+            color: #535756;
+        }
+        .sideBlock {
+            width: 30%;
+            overflow: scroll;
+            height: 100%;
+            scroll-behavior: smooth;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none;  /* IE 10+ */
+        }
+        .sideBlock::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Edge */
+        }
+        .mainBlock {
+            width: 70%;    
+            display: grid;
+        }
+        a {
+            cursor: pointer;
+            color: inherit; /* mantém a cor do texto */
+        }
+        .logo {
+				/*font-family: 'Bebas Neue', sans-serif;*/
+                /*font-size: 300px;*/
+                /*font-size: 19cqw;*/
+                position: sticky;
+                top: 0;
+                background-color: #ece8e0;
+                z-index: 2;
+                width: 100%;
+                padding-bottom: 1em;
+                /*color: black;*/
+		}
+        .sidebar {
+            margin-top: 5em;
+            /*width: 32rem;
+            padding: 20px;
+            background-color: #ece8e0;*/
+        }
+        .accordion {
+            background: none;
+            color: #363938;
+            padding: 10px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            border-bottom: 1px solid #b7bdbb;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .instagram {
+            float: right;
+            
+        }
+        .languageSelector {
+            /*float: right;*/
+            text-align: right;
+            /*position: fixed;
+            top: 390px;
+            left: 435px;
+            z-index: 200;*/
+        }
+        .panel {
+            display: none;
+            padding: 10px;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        .imageContainer {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .fundo{
+            width: 50%;
+            margin-left: auto;
+            /*float: right;*/
+            /*position: fixed;
+            bottom: 10rem;
+            right: 10rem;
+            height: 60%;
+            z-index: 1000;*/
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                margin-top: 2em;
+            }
+            .sideBlock{
+                width: 50%;
+            }
+            .mainBlock{
+                width: 50%;
+            }
+            .fundo{
+                width: 100%;
+            }
+        }
+        @media (max-width: 480px) {
+            body {
+                flex-direction: column;
+            }
+            .sideBlock{
+                width: 100%;
+            }
+            .sidebar {
+                margin-top: 1em;
+            }
+            .mainBlock{
+                width: 100%;
+            }
+            .fundo{
+                width: 100%;
+            }
+            .languageSelector{
+                margin-bottom: 1em;
+                margin-top: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sideBlock">
+            <img src="images/prea-logo-large-cut.png" alt="Logo da Empresa" class="logo">
+            <!-- <div class="logo">PREA</div> -->
+
+        <div class="sidebar" id="sidebar">
+            <button id="sobre" class="accordion" data-en="about" data-pt="sobre">sobre</button>
+            <div class="panel" >
+                
+                <strong>prea</strong> surge de uma intenção. 
+                <br><br>
+                uma antecedência face ao espírito canónico- por vezes dogmático- de um atelier de arquitectura.
+                <br><br>
+                partindo do interesse de um grupo de amigos, arquitectos, com experiências pessoais e profissionais diversas, mas sobretudo marcados por uma sensibilidade comum, os <strong>prea</strong> ambicionam traçar um caminho dialético em prol de uma prática arquitectónica capaz de dar uma resposta possível para os problemas reais e concretos daqueles que os procuram. 
+                <br><br>
+                através de propostas heterogêneas e de uma linguagem desenraizada, por vezes distante no tempo e no espaço, os <strong>prea</strong> procuram apresentar ideias que sejam solução para as inquietações latentes contemporâneas e possibilitem a transformação de realidades.
+                <br><br>
+                a intervenção que querem estabelecer quer-se dilatada- multidisciplinar - influenciada por campos de ação que vão da fotografia de viagem ao teatro, do cinema à política, mas acima de tudo que possam ir além do cariz formal da arquitectura, partindo de um modus-operandi em progressivo desenvolvimento, num crescendo em devir. 
+                <br><br>
+                os projectos que deles derivam, consequência de intenções expostas às mais variadas adversidades e em determinados casos incontroláveis, são apenas exemplo demonstrativo de um esforço concretizado, sem um sentido claro de pretensão autoral, mas antes universal.
+                
+            </div>
+            
+            <button class="accordion">equipa</button>
+            <!--<div class="panel">
+                ricardo nunes - FAUP / FADU-UBA
+                <br><br>
+                catarina fernandes - DARQ
+                <br><br>
+                joana leitão - FAUP / FADU-UBA
+                <br><br>
+                pablo castillo - ULPGGC / MIT
+                <br><br>
+                
+            </div>-->
+            <div class="panel">
+                ricardo nunes
+                <br><br>
+                catarina fernandes
+                <br><br>
+                joana leitão
+                <br><br>
+                pablo castillo
+                <br><br>
+                
+            </div>
+            
+            <button class="accordion">contacto</button>
+            <div class="panel">
+                email: contato@arquitetura.com
+                <br><br>
+                telefone: +351 123 456 789
+                <br><br>
+                <a href="https://www.instagram.com" target="_blank" class="instagram">
+                    <img src="images/instagram-svgrepo-com.svg" width="32" height="32" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="mainBlock">
+        <div class="languageSelector">
+            <a onclick="setLanguage('pt')">pt</a>|<a onclick="setLanguage('en')">en</a>
+        </div>
+        <div class="imageContainer">
+            <img class="fundo" src="images/fundo.jpg">    
+        </div>
+    </div>
+    
+    
+    <script>
+
+const translations = {
+        sobre: {
+            pt: `<strong>prea</strong> surge de uma intenção. 
+                    <br><br>
+                    uma antecedência face ao espírito canónico- por vezes dogmático- de um atelier de arquitectura.
+                    <br><br>
+                    partindo do interesse de um grupo de amigos, arquitectos, com experiências pessoais e profissionais diversas, mas sobretudo marcados por uma sensibilidade comum, os <strong>prea</strong> ambicionam traçar um caminho dialético em prol de uma prática arquitectónica capaz de dar uma resposta possível para os problemas reais e concretos daqueles que os procuram. 
+                    <br><br>
+                    através de propostas heterogêneas e de uma linguagem desenraizada, por vezes distante no tempo e no espaço, os <strong>prea</strong> procuram apresentar ideias que sejam solução para as inquietações latentes contemporâneas e possibilitem a transformação de realidades.
+                    <br><br>
+                    a intervenção que querem estabelecer quer-se dilatada- multidisciplinar - influenciada por campos de ação que vão da fotografia de viagem ao teatro, do cinema à política, mas acima de tudo que possam ir além do cariz formal da arquitectura, partindo de um modus-operandi em progressivo desenvolvimento, num crescendo em devir. 
+                    <br><br>
+                    as projectos que deles derivam, consequência de intenções expostas às mais variadas adversidades e em determinados casos incontroláveis, são apenas exemplo demonstrativo de um esforço concretizado, sem um sentido claro de pretensão autoral, mas antes universal.
+                `,
+            en: `<strong>prea</strong> arises from an intention.
+                    <br><br>
+                    a stance that precedes the canonical—sometimes dogmatic—spirit of an architecture studio.
+                    <br><br>
+                    born from the shared interest of a group of friends, architects with diverse personal and professional experiences but above all marked by a common sensibility, prea aspires to chart a dialectical path toward an architectural practice capable of offering possible responses to the real and concrete problems of those who seek them out.
+                    <br><br>
+                    through heterogeneous proposals and a language that is unrooted—at times distant in time and space—prea aims to present ideas that address contemporary latent concerns and enable the transformation of realities.
+                    <br><br>
+                    the kind of intervention they seek to establish is expansive—multidisciplinary—shaped by fields ranging from travel photography to theater, from cinema to politics, but above all striving to go beyond the formal nature of architecture, stemming from a modus operandi in continuous evolution, in a becoming crescendo.
+                    <br><br>
+                    the projects that result from this are the consequence of intentions exposed to a wide array of adversities, sometimes uncontrollable, and serve merely as demonstrative examples of a realized effort—not with a clear sense of authorship or claim, but rather with a universal intent.
+                `
+        },
+        equipa: {
+            pt: `ricardo nunes - FAUP / FADU-UBA
+                <br><br>
+                catarina fernandes - DARQ 
+                <br><br>
+                joana leitão - FAUP / FADU-UBA
+                <br><br>
+                pablo castillo - ULPGGC / MIT`,
+            en: `ricardo nunes - FAUP / FADU-UBA
+                <br><br>
+                catarina fernandes - DARQ 
+                <br><br>
+                joana leitão - FAUP / FADU-UBA
+                <br><br>
+                pablo castillo - ULPGGC / MIT`
+        },
+        contacto: {
+            pt: `email: contato@arquitetura.com
+                <br><br>
+                telefone: +351 123 456 789
+                <br><br>
+                <a href="https://www.instagram.com" target="_blank" class="instagram">
+                    <img src="images/instagram-svgrepo-com.svg" width="32" height="32" alt="Instagram">
+                </a>
+            `,
+            en: `email: contact@arquitetura.com
+                <br><br>
+                phone: +351 123 456 789
+                <br><br>
+                <a href="https://www.instagram.com" target="_blank" class="instagram">
+                    <img src="images/instagram-svgrepo-com.svg" width="32" height="32" alt="Instagram">
+                </a>
+            `
+        }
+    };
+
+        function setLanguage(lang) {
+            const buttons = document.querySelectorAll('.accordion');
+            const panels = document.querySelectorAll('.panel');
+
+            buttons[0].innerHTML = lang === 'pt' ? 'sobre' : 'about';
+            panels[0].innerHTML = translations.sobre[lang];
+
+            buttons[1].innerHTML = lang === 'pt' ? 'equipa' : 'team';
+            panels[1].innerHTML = translations.equipa[lang];
+
+            buttons[2].innerHTML = lang === 'pt' ? 'contacto' : 'contact';
+            panels[2].innerHTML = translations.contacto[lang];
+        }
+
+
+        document.querySelectorAll('.accordion').forEach(button => {
+            button.addEventListener('click', function () {
+                this.classList.toggle('active');
+                let panel = this.nextElementSibling;
+                panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+        /*document.querySelectorAll('.accordion').forEach(button => {
+            button.addEventListener('click', function () {
+                let panel = document.getElementById('sidebar');
+                panel.style.width = '300px';
+            });
+        });*/
+		
+    </script>
+</body>
+</html>
